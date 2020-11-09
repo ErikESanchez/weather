@@ -31,9 +31,6 @@
       <p class="card-text">
         With supporting text below as a natural lead-in to additional content.
       </p>
-      <button type="button" class="btn btn-primary" @click="getCurrentWeather">
-        Get Weather Data
-      </button>
     </div>
     <div class="card-footer text-muted">{{ location.localtime }}</div>
   </div>
@@ -43,7 +40,7 @@
 // Todo: Figure out how to use vuex later
 // import { createStore } from "vuex";
 import axios from "axios";
-import apikey from "./apikey.ts";
+import apikey from "./apikey";
 // ? If I remove the ts it gives me an error rendering 
 const weatherURL = "http://api.weatherapi.com/v1/";
 
@@ -55,6 +52,9 @@ export default {
     location: {},
     currentWeather: {},
   }),
+  mounted(){
+    this.getCurrentWeather()
+  },
   methods: {
     async getCurrentWeather() {
       console.log("bruh");
