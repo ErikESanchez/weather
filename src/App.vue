@@ -6,7 +6,7 @@
           <a class="nav-link active" href="#">Current Weather</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Forecast</a>
+          <router-link to='/forecast' class="nav-link">Forecast</router-link>
         </li>
         <li class="nav-item">
           <a
